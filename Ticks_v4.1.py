@@ -11,7 +11,7 @@ import appscript
 
 def get_sess_id():
 
-    url = 'https://kite.trade/connect/login?api_key=kupxiilizwwmrs9m&v=3'
+    url = 'https://kite.trade/connect/login?api_key=API_KEY&v=3'
 
     chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
 
@@ -31,13 +31,13 @@ def get_sess_id():
 
 # Initialise
 
-kite = KiteConnect(api_key="kupxiilizwwmrs9m")
+kite = KiteConnect(api_key="API_KEY")
 
 
 data = kite.generate_session(get_sess_id(), api_secret="API_SECRET")
 tokens = [54922503, 55168263]
 
-kws = KiteTicker("kupxiilizwwmrs9m", data['access_token'])
+kws = KiteTicker("API_KEY", data['access_token'])
 
 # tokens = [10973954, 14451970]
 
