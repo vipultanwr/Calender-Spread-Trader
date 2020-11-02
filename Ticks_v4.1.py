@@ -34,7 +34,7 @@ def get_sess_id():
 kite = KiteConnect(api_key="kupxiilizwwmrs9m")
 
 
-data = kite.generate_session(get_sess_id(), api_secret="lk9oncf5xb0vkf7c2senrhwz7s97g431")
+data = kite.generate_session(get_sess_id(), api_secret="API_SECRET")
 tokens = [54922503, 55168263]
 
 kws = KiteTicker("kupxiilizwwmrs9m", data['access_token'])
@@ -373,7 +373,7 @@ def on_close(ws, code, reason):
     global TradeTableDF
     # TradeTableDF.to_csv('TradeTable.csv')
 
-    data = kite.generate_session(get_sess_id(), api_secret="lk9oncf5xb0vkf7c2senrhwz7s97g431")
+    data = kite.generate_session(get_sess_id(), api_secret="API_SECRET")
     # ws.stop()
 
 #################################################################
